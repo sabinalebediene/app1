@@ -1,0 +1,21 @@
+{
+    "name": "sabin/app1",
+    "authors": [
+        {
+            "name": "sabinalebediene",
+            "email": "70894973+sabinalebediene@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app",
+            "Controller\\": "app\\controllers",
+            "Repository\\": "app\\repositories",
+            "Model\\": "app\\models"
+        }
+    }
+}
