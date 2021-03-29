@@ -16,9 +16,9 @@ class EmployeeContollerTest extends TestCase {
             
         
         // when
-        $res = $employeeController->getAllJsonWithMetaInformation();
+        $res = $employeeController->getAllJson();
         // then
-        assertEquals('[{"id":"1","name":"Jonas"},{"id":"2","name":"Petras"}]', $res);
+        assertEquals('[{"id":"1","name":"Jonas"},{"id":"2","name":"Antanas"}]', $res);
         }
 
     public function testGetAllJsonReturnsJsonMeta() {
@@ -31,7 +31,7 @@ class EmployeeContollerTest extends TestCase {
             // when
             $res = $employeeController->getAllJsonWithMetaInformation();
             // then
-            assertEquals('{"employees":[{"id":"1","name":"Jonas"},{"id":"2","name":"Petras"}],"count":2}', $res);
+            assertEquals('{"employees":[{"id":"1","name":"Jonas"},{"id":"2","name":"Antanas"}],"count":2}', $res);
         }
        
 }

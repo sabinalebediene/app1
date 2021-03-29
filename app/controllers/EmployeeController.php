@@ -2,6 +2,7 @@
 
 namespace Controller;
 use Repository\EmployeeRepository;
+use Model\EmployeeMeta;
 
 class EmployeeController {
     private $employeeRepository;
@@ -18,8 +19,8 @@ class EmployeeController {
 
         return json_encode($meta);
     }
-    // public function getAllJson() : string {
-    //     return json_encode($this->employeeRepository->getAll());
-    // }
+    public function getAllJson() : string {
+        return json_encode($this->employeeRepository->getAll());
+    }
 
 }
