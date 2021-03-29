@@ -12,9 +12,14 @@ class EmployeeController {
 
     public function getAll(){}
     public function getAllById(){}
-    public function getAllJsonWithMetaInformation() : string {}
-    public function getAllJson() : string {
-        return json_encode($this->employeeRepository->getAll());
+    public function getAllJsonWithMetaInformation() : string {
+        $employees = $this->employeeRepository->getAll();
+        $meta = new EmployeeMeta($employees, count($employees));
+
+        return json_encode($meta);
     }
+    // public function getAllJson() : string {
+    //     return json_encode($this->employeeRepository->getAll());
+    // }
 
 }
